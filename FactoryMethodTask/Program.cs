@@ -1,13 +1,17 @@
 ﻿using System;
+using FactoryMethodTask.shapes;
+using FactoryMethodTask.shapes.bases;
 
-namespace FactoryMethodtask
+namespace FactoryMethodTask
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            IShape shape = ShapeFactory.GetRandomShape();
-
+            ClientShape client = new ClientShape();
+            
+            IShape shape = client.GetRandomShape();
+       
             switch (shape)
             {
                 case Triangle triangle:
@@ -29,7 +33,7 @@ namespace FactoryMethodtask
                     rectangle.Y = 3;
                     break;
             }
-            
+
             Console.WriteLine(shape);
         }
     }

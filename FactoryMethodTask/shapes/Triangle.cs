@@ -1,6 +1,7 @@
 using System;
+using FactoryMethodTask.shapes.bases;
 
-namespace FactoryMethodtask
+namespace FactoryMethodTask.shapes
 {
     public class Triangle: IShape
     {
@@ -20,7 +21,7 @@ namespace FactoryMethodtask
             this.y = y;
             this.z = z;
         }
-       
+        
         
         public string Name 
         {
