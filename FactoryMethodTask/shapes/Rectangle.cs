@@ -1,36 +1,45 @@
 using System;
+using FactoryMethodTask.shapes.bases;
 
-namespace FactoryMethodtask
+namespace FactoryMethodTask.shapes
 {
-    public class Circle: IShape
+    public class Rectangle: IShape
     {
+
         private string name;
         private string color;
-        private int radius;
-        
-        public Circle()
+        private double x, y;
+
+        public Rectangle()
         {
             
         }
-        public Circle(string name, string color, int radius)
+
+        public Rectangle(string name, string color, double x, double y)
         {
             this.name = name;
             this.color = color;
-            this.radius = radius;
+            this.x = x;
+            this.y = y;
         }
-
-        public string Name
+        
+        public string Name 
         {
-            set { name = value; }
+            set { name = value; } 
         }
-        public string Color
+        public string Color 
         {
-            set { color = value; }
+            set { color = value; } 
         }
-        public int Radius
+        public double X 
         {
-            get { return radius; }
-            set { radius = value; }
+            get { return x; } 
+            set { x = value; } 
+        }
+        public double Y 
+        {
+            get { return y; } 
+            set { y = value; } 
         }
         
         public string ShapeName()
@@ -45,18 +54,18 @@ namespace FactoryMethodtask
 
         public double ShapeArea()
         {
-            return Math.PI * (radius * radius);
+            return x * y;
         }
 
         public double ShapePerimeter()
         {
-            return 2 * Math.PI * radius;
+            return 2 * (x * y);
         }
 
         public override string ToString()
         {
             return $"Name:{ShapeName()}, Color:{ShapeColor()}, Area:{ShapeArea()}, Perimeter:{ShapePerimeter()}";
         }
-
     }
 }
+

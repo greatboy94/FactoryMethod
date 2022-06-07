@@ -1,6 +1,6 @@
 using System;
 
-namespace FactoryMethodtask
+namespace FactoryMethodTask.shapes.bases
 {
     public interface IShape
     {
